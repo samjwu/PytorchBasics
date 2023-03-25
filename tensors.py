@@ -15,6 +15,11 @@ print(f"NumPy Array:\n {np_array}")
 print(f"Torch Tensor from NumPy Array:\n {converted_tensor}")
 print(f"NumPy Array from Torch Tensor:\n {converted_array}\n")
 
+print("NumPy and Torch tensors share same memory address")
+converted_tensor.add_(1)
+print(f"Torch Tensor from NumPy Array:\n {converted_tensor}")
+print(f"NumPy Array from Torch Tensor:\n {converted_array}\n")
+
 ones_tensor = torch.ones_like(data_tensor) # retains the properties of data_tensor
 print(f"Ones Tensor:\n {ones_tensor}")
 rand_tensor = torch.rand_like(data_tensor, dtype=torch.float) # overrides the datatype of data_tensor
