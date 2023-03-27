@@ -1,5 +1,5 @@
+import numpy
 import torch
-import numpy as np
 
 print(f"torch.cuda.is_available(): {torch.cuda.is_available()}\n")
 
@@ -8,7 +8,7 @@ data_tensor = torch.tensor(data)
 print(f"2x2 Array:\n {data}")
 print(f"2x2 Torch Tensor:\n {data_tensor}\n")
 
-np_array = np.array(data)
+np_array = numpy.array(data)
 converted_tensor = torch.from_numpy(np_array)
 converted_array = converted_tensor.numpy()
 print(f"NumPy Array:\n {np_array}")
